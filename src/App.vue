@@ -3,14 +3,18 @@
     <ThemeSwitcher/>
   </header>
   <div class="div-container">
+    <div class="custom-display-flex">
+      <form-title/>
+    </div>
     <div>
-      <div class="card">
-      </div>
+      <calculate-money-form/>
     </div>
   </div>
 </template>
 
 <script setup>
+import CalculateMoneyForm from "@/components/calculate-money-form/CalculateMoneyForm.vue";
+import FormTitle from "@/components/calculate-money-form/components/FormTitle.vue";
 </script>
 <style>
 .div-container {
@@ -19,17 +23,8 @@
   width: 100% !important;
 }
 
-.card {
-  height: 300px;
-  animation: show-form 4s ease forwards;
-}
-
-@keyframes show-form {
-  from {
-    width: 0;
-  }
-  to {
-    width: 1000px;
-  }
+.custom-display-flex {
+  display: flex;
+  align-items: center
 }
 </style>
