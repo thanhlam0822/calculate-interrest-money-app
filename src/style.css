@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    height: 100%;
+}
+
+:root {
+    --bg-color: #A9C9FF;
+    --bg-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    --body-bg: var(--bg-color);
+    --body-text-color: var(--p-surface-900);
+    --card-border: 1px solid var(--border-color);
+    --card-bg: var(--p-surface-0);
+    --border-color: var(--p-surface-200);
+    --text-color: var(--p-surface-700);
+    --overlay-background: #ffffff;
+}
+
+:root[class='p-dark'] {
+    --bg-color: #09090b;
+    --bg-image: #09090b;
+    --body-bg: var(--bg-color);
+    --body-text-color: var(--p-surface-50);
+    --card-border: 1px solid transparent;
+    --card-bg: var(--p-surface-900);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-color: var(--p-surface-0);
+    --overlay-background: var(--p-surface-900);
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--body-bg);
+    background-image: var(--bg-image);
+    font-weight: normal;
+    color: var(--body-text-color);
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    animation: nuwaxFill 3s ease forwards;
+}
+
+.card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+@keyframes nuwaxFill {
+    0% {
+        background-size: 100% 0;
+        background-color: transparent;
+    }
+    50% {
+        background-size: 100% 50%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}
