@@ -1,6 +1,21 @@
 <template>
   <header>
-    <ThemeSwitcher/>
+    <div class="custom-display-flex-2">
+      <div>
+        <ThemeSwitcher/>
+      </div>
+      <div>
+        <el-switch
+            v-model="isVietnamese"
+            @change="changeLanguage"
+            inline-prompt
+            active-text="Vie"
+            inactive-text="Eng"
+            style="--el-switch-on-color: #13ce66"
+        />
+      </div>
+    </div>
+
   </header>
   <div class="div-container">
     <div class="custom-display-flex">
@@ -15,6 +30,18 @@
 <script setup>
 import CalculateMoneyForm from "@/components/calculate-money-form/CalculateMoneyForm.vue";
 import FormTitle from "@/components/calculate-money-form/components/FormTitle.vue";
+import {ref} from "vue";
+import {changeLocale} from "@/i18n";
+
+let isVietnamese = ref(false);
+
+function changeLanguage() {
+  if (isVietnamese.value) {
+    changeLocale('vie');
+    return;
+  }
+  changeLocale('en')
+}
 </script>
 <style>
 .div-container {
@@ -26,5 +53,11 @@ import FormTitle from "@/components/calculate-money-form/components/FormTitle.vu
 .custom-display-flex {
   display: flex;
   align-items: center
+}
+
+.custom-display-flex-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
 }
 </style>

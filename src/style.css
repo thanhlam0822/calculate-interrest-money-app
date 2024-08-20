@@ -16,11 +16,13 @@ html {
     --border-color: var(--p-surface-200);
     --text-color: var(--p-surface-700);
     --overlay-background: #ffffff;
+    --td-color: #dddddd;
 }
 
 :root[class='p-dark'] {
     --bg-color: #09090b;
     --bg-image: #09090b;
+    --td-color: #18181b;
     --body-bg: var(--bg-color);
     --body-text-color: var(--p-surface-50);
     --card-border: 1px solid transparent;
@@ -48,6 +50,10 @@ body {
     background-repeat: no-repeat;
     background-position: center top;
     animation: nuwaxFill 3s ease forwards;
+
+    tr:nth-child(even) {
+        background-color: var(--td-color);
+    }
 }
 
 .card {

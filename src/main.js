@@ -9,9 +9,10 @@ import SelectButton from "primevue/selectbutton";
 import ToggleSwitch from "primevue/toggleswitch";
 import Noir from './presets/Noir.js';
 import StyleClass from 'primevue/styleclass';
-
-
-import App from './App.vue'
+import ElementPlus from 'element-plus';
+import 'element-plus/dist/index.css';
+import App from './App.vue';
+import i18n from "@/i18n";
 
 const app = createApp(App);
 app.use(PrimeVue, {
@@ -24,7 +25,9 @@ app.use(PrimeVue, {
         }
     }
 });
+app.use(i18n);
 app.use(AppState);
+app.use(ElementPlus);
 app.directive('styleclass', StyleClass);
 app.component('ThemeSwitcher', ThemeSwitcher);
 app.component('SelectButton', SelectButton);
