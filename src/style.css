@@ -73,3 +73,22 @@ body {
         background-size: 100% 100%;
     }
 }
+
+@media screen and (max-width: 1080px) {
+    .div-container {
+        flex-direction: column;
+    }
+
+    .custom-display-flex {
+        justify-content: center;
+        margin-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .calculate-money-form-container {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+

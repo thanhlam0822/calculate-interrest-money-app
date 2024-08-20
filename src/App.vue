@@ -21,7 +21,7 @@
     <div class="custom-display-flex">
       <form-title/>
     </div>
-    <div>
+    <div class="calculate-money-form-container">
       <calculate-money-form/>
     </div>
   </div>
